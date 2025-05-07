@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+
+    <title>Rating App</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      :root {
+        --orange-500: hsl(25, 97%, 53%);
+        --white: hsl(0, 100%, 100%);
+        --grey-500: hsl(217, 12%, 63%);
+        --grey-900: hsl(213, 19%, 18%);
+        --grey-950: hsl(216, 12%, 8%);
+      }
+      body {
+        font-family: 'Overpass', sans-serif;
+      }
+    </style>
+
+  </head>
+  <body class=" bg-[var(--grey-950)] text-white flex items-center justify-center min-h-screen p-4 text-[var(--grey-500)]">
+
+    <!-- Rating Card -->
+    
+     <main id="rating-card" class="bg-[var(--grey-900)]  p-6 rounded-xl w-full max-w-sm shadow-md text-center transition-all">
+       <!-- Star Icon -->
+       <img src="assets/star-icon.svg" alt="Star icon" class="w-10 h-10 bg-gray-700 p-2 rounded-full mb-4" />
+
+  
+        <h2 class="text-xl font-semibold mb-2 animate__animated animate__bounce animate  ">How did we do?</h2>
+      <p class="text-sm text-gray-400 mb-4">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+      <div class="flex justify-between mb-4" role="radiogroup" aria-label="Rating options">
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-[var(--white)] hover:text-black" data-value="1" aria-pressed="false">1</button>
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-[var(--white)] hover:text-black" data-value="2" aria-pressed="false">2</button>
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-[var(--white)] hover:text-black" data-value="3" aria-pressed="false">3</button>
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-[var(--white)] hover:text-black" data-value="4" aria-pressed="false">4</button>
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-[var(--white)] hover:text-black" data-value="5" aria-pressed="false">5</button>
+      </div>
+
+      <p id="error-msg" class="text-red-500 text-sm mb-2 hidden" role="alert">Please select a rating.</p>
+
+      <button id="submit-btn" class="bg-[var(--orange-500)] hover:bg-[var(--white)] hover:text-black w-full py-2 rounded-xl text-white font-semibold">Submit</button>
+    </main>
+
+    <!-- Thank You Card -->
+    <main id="thankyou-card" class="hidden bg-gray-800 p-6 rounded-xl w-full max-w-sm shadow-md text-center transition-all">
+      
+      <img src="assets/illustration-thank-you.svg" alt="Thank you" class="mx-auto" />
+      <p id="selected-rating-text" class="text-sm text-orange-400 mb-4 bg-gray-950 inline-block px-4 py-1 my-5 rounded-full">You selected 3 out of 5</p>
+      <h2 class="text-xl font-[15px] mb-2  animate__animated animate__bounce animate">Thank you!</h2>
+      <p class="text-sm text-gray-400 mb-4">We appreciate you taking the time to give a rating. If you ever need more support, Dont hesitate to get in touch!</p>
+      <button id="rate-again-btn" class="text-semibold  FONT-[15px] text-orange-400 underline hover:text-orange-300">Rate Again</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
