@@ -14,13 +14,13 @@ ratingButtons.forEach(btn => {
     selectedRating = btn.dataset.value;
 
     ratingButtons.forEach(b => {
-      b.classList.remove('bg-[var(--orange-500)]', 'text-white');
+      b.classList.remove('bg-[var(--orange-500)]', 'text-black');
       b.classList.add('bg-gray-700', 'text-gray-300');
       b.setAttribute('aria-pressed', 'false');
     });
 
     btn.classList.remove('bg-gray-700', 'text-gray-300');
-    btn.classList.add('bg-[var(--orange-500)]', 'text-white');
+    btn.classList.add('bg-[var(--orange-500)]', 'text-black');
     btn.setAttribute('aria-pressed', 'true');
 
     errorMsg.classList.add('hidden');
